@@ -10,8 +10,31 @@ let hours = currentDate.getHours()
 let minutes = currentDate.getMinutes()
 let seconds = currentDate.getSeconds()
 
-let days = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar']
-let day = days[currentDate.getDay()]
+let day = currentDate.getDay()
+
+switch(day){
+    case 1:
+        day = "Pazartesi"
+        break;
+    case 2:
+        day = "Salı"
+        break;
+    case 3: 
+        day= "Çarşamba"     
+        break;   
+    case 4: 
+        day = "Perşembe"     
+        break;  
+    case 5: 
+        day = "Cuma"     
+        break;  
+    case 6: 
+        day = "Cumartesi"     
+        break;  
+    case 7: 
+        day = "Pazar"     
+        break;  
+}
 
 let dateInfo = document.querySelector("#myClock")
 dateInfo.innerHTML = `${hours}:${minutes}:${seconds} ${day}`}
